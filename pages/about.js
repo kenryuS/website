@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from "../styles/Home.module.css"
 
 export default function about() {
@@ -20,9 +21,9 @@ export default function about() {
                 </p>
 
                 <ul className={styles.jumper}>
-	                <a href="/"><li>Home Page</li></a>
-                    <a href="/blog"><li>Blog Home</li></a>
-                    <a href="/about"><li>About</li></a>
+                    <Link href="/"><a><li>Home Page</li></a></Link>
+                    <Link href="/blog"><a><li>Blog Home</li></a></Link>
+                    <Link href="/about"><a><li>About</li></a></Link>
 	            </ul>
             </main>
 

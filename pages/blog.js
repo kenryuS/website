@@ -17,7 +17,7 @@ export default function blog() {
         </h1>
 
         <p className={styles.description}>
-          This is the blog page of kenryuS.
+          This is the blog page of kenryuS.<br/><b style={{color: 'rgb(194, 199, 44)'}}>Warning: This website is under construction!</b>
         </p>
 
 	<ul className={styles.jumper}>

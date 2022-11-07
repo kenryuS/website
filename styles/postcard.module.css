@@ -1,0 +1,6 @@
+.card {
+    border: 0.5vh black solid;
+    border-radius: 1vh;
+    background-color: #b3b3b3;
+    display: block;
+}

@@ -1,0 +1,8 @@
+.container {
+    border: black 0.5vh solid;
+    float: left;
+    display: block;
+    width: 20%;
+    height: vmax;
+    margin: 0 2vh;
+}

@@ -1,0 +1,16 @@
+.cont {
+    width: 100%;
+}
+
+.cont small {
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+}
+
+.cont div {
+    margin: auto;
+    width: 80%;
+    border: 0.5vh black solid;
+    background-color: black;
+}

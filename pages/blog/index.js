@@ -43,16 +43,15 @@ export async function getStaticProps() {
     
     const posts = files.map((filename) => {
         const slug = filename.replace('.mdx', '');
-
-        const mdWithMeta = fs.readFileSync(path.join('posts', filename), "utf-8");
-
-        const {data:frontmatter} = matter(mdWithMeta);
-
+        const mdmeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
+        const {data:metadata} = matter(mdmeta);
         return {
             slug,
-            frontmatter
+            metadata
         };
     });
+
+    console.log(posts);
 
     return {
         props: {

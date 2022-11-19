@@ -1,17 +1,11 @@
-module.exports = {
-    webpack: (config, options) => {
-        config.resolve.fallback = {fs: false, buffer: false, path: false, process: false};
-        config.module.rules.push({
-            test: /\.mdx?$/,
-            use: [
-                options.defaultLoaders.babel,
-                {
-                    loader: '@mdx-js/loader',
-                },
-            ],
-        });
+const withMDX = require('@next/mdx')({
+    extension: /\.(md|mdx)$/,
+    options: {
+        remarkPlugins: [],
+	rehypePlugins: []
+    }
+})
 
-        return config;
-    },
+module.exports = withMDX({
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-}
+})

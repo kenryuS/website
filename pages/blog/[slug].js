@@ -3,31 +3,26 @@ import path from 'path'
 import matter from "gray-matter";
 import dynamic from 'next/dynamic';
 import Link from "next/link";
+import Head from "next/head";
+import {serialize} from 'next-mdx-remote/serialize'
+import {MDXRemote} from 'next-mdx-remote'
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import styles from '../../styles/home.module.css'
+import mdstyles from '../../styles/markdown.module.css'
 
-export default function PostPage ({fm, sl, cont}) {
-    let title = fm.title;
-    let date = fm.date;
-    let bcont = cont;
-    let mdx;
-    
-    if (typeof window) {
-        const Mdx = dynamic(() => import(`../../posts/${sl + '.mdx'}`));
-        mdx = <Mdx/>
-    } {/*else {
-        const comp = require(`../../posts/${sl + '.mdx'}`).default;
-        const ReactDOMServer = require("react-dom/server");
-
-        const ssr = ReactDOMServer.renderToString(<comp/>) as string;
-        mdx = <div dangerouslySetInnerHTML={{__html: ssr}}/>;
-    }*/}
+export default function PostPage ({frontMatter: {title, date}, mdxSource}) {    
     return (
         <div className={styles.container}>
-            <Link href='/blog'>
+            <Head>
+                <title>kenryuS Blog - {title}</title>
+            <meta name="description" content="kenryuS Blog post"/>
+            <link rel="icon" href="/icon.jpeg"/>
+        </Head>
+        <Link href='/blog'>
                 <button>Go Back</button>
             </Link>
-            <div>
-                {mdx}
+            <div className={mdstyles.Article}>
+                <MDXRemote {...mdxSource} components={{SyntaxHighlighter}}/>
             </div>
         </div>
     )
@@ -50,14 +45,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params: {slug}}) {
     const markdownWithMeta = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8');
-    
-    const {data: frontmatter, content} = matter(markdownWithMeta);
-
+    const {data: frontMatter, content } = matter(markdownWithMeta);
+    const mdxSource = await serialize(content);
     return {
         props: {
-            fm: frontmatter,
-            sl: slug,
-            cont: content
+            slug,
+            frontMatter,
+            mdxSource
         },
     };
 }

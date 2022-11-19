@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div className={styles.cont}>
             <div></div>
-            <small>Created by kenryuS(Github) with Next.js</small>
+            <p>Created by kenryuS with Next.js</p>
         </div>
     )
 }

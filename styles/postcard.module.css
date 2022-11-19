@@ -2,5 +2,8 @@
     border: 0.5vh black solid;
     border-radius: 1vh;
     background-color: #b3b3b3;
-    display: block;
+    text-align: center;
+    margin: 0 0.5vw;
+    display: inline;
+    float: left;
 }

@@ -13,11 +13,11 @@ export default function about() {
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    About: <a href='https://github.com/kenryuS'>kenryuS</a>
+                    About This Website:
                 </h1>
 
                 <p className={styles.description}>
-                    About page of kenryuS.<br/><b style={{color: 'rgb(194, 199, 44)'}}>Warning: This website is under construction!</b>
+                    This is <a href="https://github.com/kenryuS">kenryuS</a> website hosted by vercel. There is separate website for portfolio: <a href="https://kenryu-liveterm.vercel.app">https://kenryu-liveterm.vercel.app</a><br/><b style={{color: 'rgb(194, 199, 44)'}}>Warning: This website is under construction!</b>
                 </p>
             </main>
         </div>

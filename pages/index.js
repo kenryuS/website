@@ -12,8 +12,10 @@ export default function Home() {
         </Head>
 
         <FloatMenu>
-            <p>Test</p>
-            <p>Test</p>
+	    <div>
+                <p>Test</p>
+                <p>Test</p>
+	    </div>
         </FloatMenu>
 
         <main className={styles.main}>

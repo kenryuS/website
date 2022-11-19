@@ -18,8 +18,8 @@ function Navbar() {
                 <nav className={styles.navi}>
                     <Link href='/'><button>Home</button></Link>
                     <Link href='/blog'><button>Blog</button></Link>
-                    <button>Test</button>
-                    <Link href='/about'><button>About</button></Link>
+                    <a href="https://kenryu-liveterm.vercel.app"><button>Terminal</button></a>
+                    <Link href='/about'><button>About Website</button></Link>
                 </nav>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import {slide as Menu} from 'react-burger-menu';
 
-export default props => {
+export default function Sidebar(props) {
     return (
         <Menu right width={'75%'}>
             <Link href='/'><a>Home</a></Link><br/>

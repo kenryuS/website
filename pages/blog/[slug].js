@@ -18,7 +18,7 @@ export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
                 <meta name="description" content="kenryuS(Kenryu Shibata) Blog post"/>
                 <link rel="icon" href="/icon.jpeg"/>
             </Head>
-            <Link href='/blog'>
+            <Link href='/blog' passHref>
                 <button>Go Back</button>
             </Link>
             <div className={mdstyles.Article}>

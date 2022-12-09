@@ -1,20 +1,28 @@
 .container {
   padding: 0 2rem;
-  display: inline-block;
+  display: inline-flex;
   width: 100%;
   margin-top: 2vh;
 }
 
 .main {
-  float: left;
+    float: left;
+    width: 75%;
+    margin: 0 12.5%;
 }
 
 .posts {
-    display:flex;
-    justify-content:center;
-    width: 50vw;
-    /*margin: 0 7.5vw;*/
-    float: left;
+    position: static;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
 }
 
-.posts .postcard_post {width: 30em;}
+@media screen and (max-width: 600px) {
+    .posts {
+        position: static;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+    }
+}

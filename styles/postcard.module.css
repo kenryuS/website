@@ -3,7 +3,36 @@
     border-radius: 1vh;
     background-color: #b3b3b3;
     text-align: center;
-    margin: 0 0.5vw;
+    margin: 1vh 0.5vw;
     display: inline;
-    float: left;
+    width: 16vw;
+    max-width: 500px;
+    min-width: 200px;
+    height: 5vh;
+    max-height: 350px;
+    min-height: 200px;
+}
+
+.card p {
+   height: 50px;
+   max-height: 60px;
+   min-height: 30px;
+}
+
+.card a {
+    width: 10vw;
+    max-width: 200px;
+    min-width: 100px;
+    height: 4vh;
+    max-height: 60px;
+    min-height: 50px;
+    padding: 1.5vh 2vw;
+    background-color: #FFFFFF;
+    border: 5px black solid;
+    border-radius: 1vh;
+}
+
+.card a:hover {
+    background-color: #E7E7E7;
+    cursor: pointer;
 }

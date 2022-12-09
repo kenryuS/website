@@ -11,14 +11,10 @@ export default function Home() {
             <link rel="icon" href="/icon.jpeg" />
         </Head>
 
-        <FloatMenu>
-	    <div>
-                <p>Test</p>
-                <p>Test</p>
-	    </div>
-        </FloatMenu>
-
         <main className={styles.main}>
+            <FloatMenu>
+                <p>Test</p>
+            </FloatMenu>
             <h1 className={styles.title}>
                 Welcome to <a href='https://github.com/kenryuS'>kenryuS</a> website!
             </h1>

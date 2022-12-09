@@ -14,14 +14,16 @@ export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>kenryuS Blog - {title}</title>
-            <meta name="description" content="kenryuS Blog post"/>
-            <link rel="icon" href="/icon.jpeg"/>
-        </Head>
-        <Link href='/blog'>
+                <title>{"kenryuS Blog - " + title}</title>
+                <meta name="description" content="kenryuS(Kenryu Shibata) Blog post"/>
+                <link rel="icon" href="/icon.jpeg"/>
+            </Head>
+            <Link href='/blog'>
                 <button>Go Back</button>
             </Link>
             <div className={mdstyles.Article}>
+            <h1>{title}</h1>
+            <h6>Last updated: {date}</h6>
                 <MDXRemote {...mdxSource} components={{SyntaxHighlighter}}/>
             </div>
         </div>

@@ -1,12 +1,11 @@
 .Article {
     width: 75%;
     margin: 0 12.5%;
-    border: 3px black solid;
     padding: 1vh 2vw;
 }
 
 .Article h1 {
-    text-align: center;
+    text-align: left;
 }
 
 .Article code {

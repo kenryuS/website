@@ -2,56 +2,82 @@
     padding: 0 2em;
 }
 
-.banner div {
-    height: 14vh;
+.bannerBar {
+    height: 16vh;
     width: 100%;
+    min-height: 60px;
+    max-height: 130px;
     background-color: #adadad;
-    border-radius: 1.5vw;
+    border-radius: 40px;
     position: relative;
     display: inline-flex;
     justify-content: space-between;
 }
 
-.banner {
-    border: black 0.6vh solid;
-    border-radius: 2vw;
-    background-color: black;
+@media screen and (max-width: 600px) {
+    .bannerBar {
+        display: none;
+    }
 }
 
-.banner div a div {
+.bannerImage {
     background-color: #505050;
+    border-radius: 40px;
+}
+.bannerImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.banner div a div img {
-    width: 12vh;
-    height: 12vh;
-    border-radius: 3vw;
-    margin-left: 1.5vw;
-    margin-top: 1vh;
+.bannerImage a {
+    text-decoration: none;
 }
 
-.banner div a div h1 {
+.bannerImage a div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 1vw;
+}
+
+.bannerImage a div img {
+    height: 14vh;
+    min-height: 50px;
+    max-height: 100px;
+    width: auto;
+    border-radius: 100px;
+}
+
+.bannerImage a div h2 {
     color: rgb(74, 221, 29);
-    padding-left: 1.5vw;
-    margin-right: 1vw;
-    padding-top: 1.75vh;
+    margin: auto 1vw;
+    font-size: 2rem;
 }
 
 .navi {
-    padding-top: 3.6vh;
+    margin: auto;
+    margin-right: 3vw;
 }
 
-.navi button {
+.navi a {
     width: 10vw;
-    height: 6vh;
-    margin-right: 1vw;
+    height: 7vh;
+    min-width:150px;
+    min-height:100px;
+    padding: 2vh 2vw;
     background-color: aquamarine;
-    border: black 0.5vh solid;
-    font-size: 1rem;
-    border-radius: 1.5vw;
+    text-decoration: none;
+    font-size: 1.25rem;
 }
 
-.navi button:hover {
+.navi a:hover {
     background-color: #7fff90;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .navi {
+        display: none;
+    }
 }

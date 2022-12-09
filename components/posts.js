@@ -9,7 +9,7 @@ export default function Post({post}) {
             <p>{post.metadata.preview}</p>
 
             <Link href={`/blog/${post.slug}`}>
-                <button>Read More</button>
+                <a>Read More</a>
             </Link>
         </div>
     )

@@ -5,10 +5,9 @@
   margin-top: 2vh;
 }
 
-.main {
-    float: left;
-    width: 75%;
-    margin: 0 12.5%;
+.mainContent {
+    display: inline-block;
+    width: 100%;
 }
 
 .posts {
@@ -18,11 +17,12 @@
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
     .posts {
         position: static;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
+

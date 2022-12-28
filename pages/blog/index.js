@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import styles from '../../styles/home.module.css'
-import FloatMenu from '../../components/floatmenu';
 import Post from '../../components/posts';
 import fs from 'fs'
 import path from 'path'
@@ -20,13 +19,13 @@ export default function blog({post}) {
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
 
-            <main className={styles.main}>
+            <div className={styles.mainContent}>
                 <h1 className={styles.title}>
                     Welcome to <a href='https://github.com/kenryuS'>kenryuS</a> blog!
                 </h1>
 
                 <p className={styles.description}>
-                    This is the blog page of kenryuS.<br/><b style={{color: 'rgb(194, 199, 44)'}}>Warning: This website is under construction!</b>
+                    This is the blog page of kenryuS.
                 </p>
 
                 <div className={styles.posts}>
@@ -36,7 +35,7 @@ export default function blog({post}) {
                         );
                     })}
                 </div>
-            </main>
+            </div>
         </div>
     );
 }

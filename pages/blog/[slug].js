@@ -18,13 +18,15 @@ export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
                 <meta name="description" content="kenryuS(Kenryu Shibata) Blog post"/>
                 <link rel="icon" href="/icon.jpeg"/>
             </Head>
-            <Link href='/blog' passHref>
-                <button>Go Back</button>
-            </Link>
             <div className={mdstyles.Article}>
-            <h1>{title}</h1>
-            <h6>Last updated: {date}</h6>
+                <h1>{title}</h1>
+                <h6>Last updated: {date}</h6>
                 <MDXRemote {...mdxSource} components={{SyntaxHighlighter}}/>
+            <Link href='/blog' passHref>
+	        <div className={mdstyles.goBackButton}>
+	            <a>Go Back</a>
+                </div>
+            </Link>
             </div>
         </div>
     )

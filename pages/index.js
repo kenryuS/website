@@ -1,8 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/home.module.css'
-import FloatMenu from '../components/floatmenu'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Post from '../components/posts'
+import Link from 'next/link'
 
-export default function Home() {
+const sortblog = (a, b) => {
+    return new Date(b.metadata.date) - new Date(a.metadata.date)
+}
+
+export default function Home({post}) {
+  console.log(post);
   return (
     <div className={styles.container}>
         <Head>
@@ -11,18 +20,42 @@ export default function Home() {
             <link rel="icon" href="/icon.jpeg" />
         </Head>
 
-        <main className={styles.main}>
-            <FloatMenu>
-                <p>Test</p>
-            </FloatMenu>
+            <div className={styles.mainContent}>
             <h1 className={styles.title}>
                 Welcome to <a href='https://github.com/kenryuS'>kenryuS</a> website!
             </h1>
 
             <p className={styles.description}>
-                This is the website of kenryuS.<br/><b style={{color: 'rgb(194, 199, 44)'}}>Warning: This website is under construction!</b>
+                This is the website of kenryuS.
             </p>
-        </main>
+	    <h2>Latest Post</h2>
+	    <div>
+	    <small>Posted on {post[0].metadata.date}</small>
+	    <h3>{post[0].metadata.title}</h3>
+	    <p>{post[0].metadata.preview}</p>
+	    <Link href={`/blog/${post[0].slug}`}>
+	        <a>Read More </a>
+	    </Link>
+	    </div> 
+        </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+    const files = fs.readdirSync(path.join('posts'));
+
+    const posts = files.map((filename) => {
+        const slug = filename.replace('.mdx', '');
+	const mdmeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
+	const {data:metadata} = matter(mdmeta);
+	return {
+            slug,
+	    metadata
+	};
+    });
+
+    return {
+        props: {post: posts.sort(sortblog)}
+    }
 }

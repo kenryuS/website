@@ -12,30 +12,22 @@ function Linksinbuttons() {
     );
 }
 
-const getWindowSize = () => {
-    if (typeof window !== "undefined") {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {width, height};
-    }
-};
-
 function Navbar() {
-    //console.log(getWindowSize());
     return (
         <div className={styles.container}>
-            <div style={{'marginTop' : '1vw'}}></div>
+        <div className={styles.topspace}></div>
             <div>
                 <div className={styles.bannerBar}>
-                    <div className={styles.bannerImage}>
-	            <Link href='/'>
+                <div className={styles.bannerImage}>
+                <Link href='/'>
                         <a>
                             <div>
                                 <img src="/icon.jpeg" className={styles.banneraImage}/>
                                 <h2>kenryuS</h2>
                             </div>
                         </a>
-	            </Link>
-	            </div>
+                </Link>
+                </div>
                     <Linksinbuttons/>
                 </div>
             </div>

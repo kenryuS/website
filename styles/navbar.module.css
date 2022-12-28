@@ -2,6 +2,16 @@
     padding: 0 2em;
 }
 
+.topspace {
+    height: 4vh;
+}
+
+@media screen and (min-width: 780px) {
+    .topspace {
+        display: none;
+    }
+}
+
 .bannerBar {
     height: 16vh;
     width: 100%;
@@ -12,9 +22,10 @@
     position: relative;
     display: inline-flex;
     justify-content: space-between;
+    margin-top: 1vw;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
     .bannerBar {
         display: none;
     }
@@ -76,7 +87,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
     .navi {
         display: none;
     }

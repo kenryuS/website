@@ -14,3 +14,16 @@
     /*background-color: grey;*/
 }
 
+.goBackButton {
+    margin-top: 5vh;
+    width: 100%;
+    height: 50px;
+    background-color: #9bf490;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.goBackButton a {
+    padding: 12.5px 0;
+}

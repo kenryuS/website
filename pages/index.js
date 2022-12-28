@@ -11,7 +11,6 @@ const sortblog = (a, b) => {
 }
 
 export default function Home({post}) {
-  console.log(post);
   return (
     <div className={styles.container}>
         <Head>

@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params: {slug}}) {
-    const markdownWithMeta = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8');
+    const markdownWithMeta = fs.readFileSync(path.join('posts/aplife', slug + '.mdx'), 'utf-8');
     const {data: frontMatter, content } = matter(markdownWithMeta);
     const mdxSource = await serialize(content);
     return {

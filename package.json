@@ -7,6 +7,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gmana/react-go-top": "^0.0.7",
     "@mdx-js/loader": "^2.1.4",
     "@mdx-js/react": "^2.1.4",
     "@next/mdx": "^12.3.1",

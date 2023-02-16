@@ -3,7 +3,7 @@
 }
 
 .topspace {
-    height: 4vh;
+    height: 2vh;
 }
 
 @media screen and (min-width: 780px) {
@@ -25,12 +25,6 @@
     margin-top: 1vw;
 }
 
-@media screen and (max-width: 780px) {
-    .bannerBar {
-        display: none;
-    }
-}
-
 .bannerImage {
     background-color: #505050;
     border-radius: 40px;
@@ -42,17 +36,14 @@
 }
 
 .bannerImage a {
-    text-decoration: none;
-}
-
-.bannerImage a div {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto 1vw;
+    text-decoration: none;
 }
 
-.bannerImage a div img {
+.bannerImage a img {
     height: 14vh;
     min-height: 50px;
     max-height: 100px;
@@ -60,7 +51,7 @@
     border-radius: 100px;
 }
 
-.bannerImage a div h2 {
+.bannerImage a h2 {
     color: rgb(74, 221, 29);
     margin: auto 1vw;
     font-size: 2rem;
@@ -89,6 +80,35 @@
 
 @media screen and (max-width: 780px) {
     .navi {
+        display: none;
+    }
+
+    .bannerBar {
+        background: transparent;
+        min-height: unset;
+        min-width: unset;
+        display:initial;
+        margin: none;
+        height: 90px;
+        width: 90px;
+    }
+
+    .bannerImage {
+        border-radius: 20px;
+        min-height: unset;
+        min-width: unset;
+        height: 80px;
+        width: 80px;
+    }
+
+    .bannerImage a img {
+        border-radius: 20px;
+        min-height: unset;
+        min-width: unset;
+        height:70px;
+    }
+
+    .bannerImage a h2 {
         display: none;
     }
 }

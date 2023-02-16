@@ -7,22 +7,22 @@ import Head from "next/head";
 import {serialize} from 'next-mdx-remote/serialize'
 import {MDXRemote} from 'next-mdx-remote'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import styles from '../../styles/home.module.css'
-import mdstyles from '../../styles/markdown.module.css'
+import styles from '../../../styles/home.module.css'
+import mdstyles from '../../../styles/markdown.module.css'
 
 export default function PostPage ({frontMatter: {title, date}, mdxSource}) {    
     return (
         <div className={styles.container}>
             <Head>
-                <title>{"kenryuS Blog - " + title}</title>
-                <meta name="description" content="kenryuS(Kenryu Shibata) Blog post"/>
+                <title>{"kenryuS AP Life Blog - " + title}</title>
+                <meta name="description" content="kenryuS(Kenryu Shibata) AP Life Blog post"/>
                 <link rel="icon" href="/icon.jpeg"/>
             </Head>
             <div className={mdstyles.Article}>
                 <h1>{title}</h1>
                 <h6>Last updated: {date}</h6>
                 <MDXRemote {...mdxSource} components={{SyntaxHighlighter}}/>
-            <Link href='/blog' passHref>
+            <Link href='/blog/aplife' passHref>
 	        <div className={mdstyles.goBackButton}>
 	            <a>Go Back</a>
                 </div>
@@ -33,7 +33,7 @@ export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
 }
 
 export async function getStaticPaths() {
-    const files = fs.readdirSync(path.join('posts'));
+    const files = fs.readdirSync(path.join('posts/aplife'));
 
     const paths = files.map((filename) => ({
         params: {

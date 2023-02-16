@@ -27,12 +27,12 @@ export default function Home({post}) {
             <p className={styles.description}>
                 This is the website of kenryuS.
             </p>
-	    <h2>Latest Post</h2>
+	    <h2>Latest Diary Entry</h2>
 	    <div>
 	    <small>Posted on {post.metadata.date}</small>
 	    <h3>{post.metadata.title}</h3>
 	    <p>{post.metadata.preview}</p>
-	    <Link href={`/blog/${post.slug}`}>
+	    <Link href={`/blog/diary/${post.slug}`}>
 	        <a>Read More </a>
 	    </Link>
 	    </div> 
@@ -42,16 +42,16 @@ export default function Home({post}) {
 }
 
 export async function getStaticProps() {
-    const files = fs.readdirSync(path.join('posts'));
+    const files = fs.readdirSync(path.join('posts/diary'));
 
     const posts = files.map((filename) => {
         const slug = filename.replace('.mdx', '');
-	const mdmeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
-	const {data:metadata} = matter(mdmeta);
-	return {
+    const mdmeta = fs.readFileSync(path.join('posts/diary', filename), 'utf-8');
+    const {data:metadata} = matter(mdmeta);
+    return {
             slug,
-	    metadata
-	};
+        metadata
+    };
     });
 
     return {

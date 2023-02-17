@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from "../styles/home.module.css"
-import Navbar from '../components/navigatorbar'
+import axios from 'axios';
+import React from 'react'
 
-export default function about() {
+export default function about({mdData}) {
     return (
         <div className={styles.container}>
             <Head>
@@ -11,7 +12,7 @@ export default function about() {
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
 
-            <div className={styles.mainContent}>
+            <main className={styles.mainContent}>
                 <h1 className={styles.title}>
                     About This Website:
                 </h1>
@@ -19,7 +20,20 @@ export default function about() {
                 <p className={styles.description}>
                     This is <a href="https://github.com/kenryuS">kenryuS</a> website hosted by vercel. There is separate website for portfolio: <a href="https://kenryu-liveterm.vercel.app">https://kenryu-liveterm.vercel.app</a>
                 </p>
-            </div>
+
+                <h3>About Myself:</h3>
+                <div dangerouslySetInnerHTML={{__html: mdData}}/>
+            </main>
         </div>
     );
+}
+
+export async function getStaticProps() {
+    const {data : markdownData} = await axios.get('https://raw.githubusercontent.com/kenryuS/kenryuS/main/README.md');
+
+    return {
+        props: {
+            mdData : markdownData.replace(/\n/g, "<br>")
+        }
+    }
 }

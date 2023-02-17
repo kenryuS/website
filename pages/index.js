@@ -19,7 +19,7 @@ export default function Home({post}) {
             <link rel="icon" href="/icon.jpeg" />
         </Head>
 
-        <div className={styles.mainContent}>
+        <main className={styles.mainContent}>
             <h1 className={styles.title}>
                 Welcome to <a href='https://github.com/kenryuS'>kenryuS</a> website!
             </h1>
@@ -27,16 +27,16 @@ export default function Home({post}) {
             <p className={styles.description}>
                 This is the website of kenryuS.
             </p>
-	    <h2>Latest Diary Entry</h2>
-	    <div>
-	    <small>Posted on {post.metadata.date}</small>
-	    <h3>{post.metadata.title}</h3>
-	    <p>{post.metadata.preview}</p>
-	    <Link href={`/blog/diary/${post.slug}`}>
-	        <a>Read More </a>
-	    </Link>
-	    </div> 
-        </div>
+            <h2>Latest Diary Entry</h2>
+            <div>
+                <small>Posted on {post.metadata.date}</small>
+                <h3>{post.metadata.title}</h3>
+                <p>{post.metadata.preview}</p>
+                <Link href={`/blog/diary/${post.slug}`}>
+                    <a>Read More </a>
+                </Link>
+            </div> 
+        </main>
     </div>
   )
 }

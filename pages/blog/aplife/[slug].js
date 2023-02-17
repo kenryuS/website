@@ -10,7 +10,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import styles from '../../../styles/home.module.css'
 import mdstyles from '../../../styles/markdown.module.css'
 
-export default function PostPage ({frontMatter: {title, date}, mdxSource}) {    
+export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
     return (
         <div className={styles.container}>
             <Head>
@@ -18,7 +18,7 @@ export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
                 <meta name="description" content="kenryuS(Kenryu Shibata) AP Life Blog post"/>
                 <link rel="icon" href="/icon.jpeg"/>
             </Head>
-            <div className={mdstyles.Article}>
+            <main className={mdstyles.Article}>
                 <h1>{title}</h1>
                 <h6>Last updated: {date}</h6>
                 <MDXRemote {...mdxSource} components={{SyntaxHighlighter}}/>
@@ -27,7 +27,7 @@ export default function PostPage ({frontMatter: {title, date}, mdxSource}) {
 	            <a>Go Back</a>
                 </div>
             </Link>
-            </div>
+            </main>
         </div>
     )
 }

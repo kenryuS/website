@@ -19,7 +19,7 @@ export default function blog({post}) {
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
 
-            <div className={styles.mainContent}>
+            <main className={styles.mainContent}>
                 <h1 className={styles.title}>
                     Welcome to <a href='https://github.com/kenryuS'>kenryuS</a> AP Life Blog!
                 </h1>
@@ -35,7 +35,7 @@ export default function blog({post}) {
                         );
                     })}
                 </div>
-            </div>
+            </main>
         </div>
     );
 }

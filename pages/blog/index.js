@@ -11,7 +11,7 @@ export default function blogHome() {
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
 
-            <div className={styles.mainContent}>
+            <main className={styles.mainContent}>
                 <h1 className={styles.title}>
                     Welcome to <a href='https://github.com/kenryuS'>kenryuS</a> blogs!
                 </h1>
@@ -33,7 +33,7 @@ export default function blogHome() {
                 </Link>
                 </li>
                 </ul>
-            </div>
+            </main>
         </div>
     );
 }

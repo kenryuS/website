@@ -6,11 +6,9 @@
     margin: 1vh 0.5vw;
     display:inline-block;
     width: 16vw;
-    max-width: 500px;
-    min-width: 200px;
-    height: 5vh;
-    max-height: 350px;
-    min-height: 200px;
+    min-width: 250px;
+    height: 25vh;
+    min-height: 230px;
 }
 
 .card p {
@@ -20,7 +18,7 @@
 }
 
 .card a {
-    width: 10vw;
+    width: 100px;
     height: 250px;
     padding: 1.5vh 2vw;
     background-color: #FFFFFF;

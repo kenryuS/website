@@ -1,0 +1,44 @@
+---
+title: "AP CSP - Unit 8 Create Task Practice Progress"
+date: "02/19/2023"
+preview: "Why is it hard to just read the JSON file?"
+---
+
+My class started to prepare for the AP CSP create task by actually making it.
+
+From the selection, I chose the project uses different language. (Note: my class usually uses code.org javascript app lab)
+
+I decided to make the vocab quiz game using C++ and Qt 6. I've found the JSON file with words and their definitions and the C++ library for JSON.
+
+I prepared the window design and worked on the utilities for loading, getting random words, etc. first.
+
+But the JSON file didn't load as if it was in the documentation.
+
+From the documentation, I just needed to write these lines:
+
+<SyntaxHighlighter language="cpp">
+    {`
+    ifstream file("dictionary.json");
+    json data = json::parse(file);
+    `}
+</SyntaxHighlighter>
+
+But `json::parse` couldn't somehow read the content and always gave me error and crashed my app.
+
+After hours of research, I finally managed to read and print out the content by:
+
+<SyntaxHighlighter language="cpp">
+    {`
+    QFile file(":dictionary.json");
+    file.open(QIODevice::ReadOnly);
+    QString s;
+    QTextStream s1(&file);
+    s.append(s1.readAll());
+    string p = s.toStdString();
+    json data = json::parse(p);
+    cout << data["0"]["after"] << endl;
+    file.close();
+    `}
+</SyntaxHighlighter>
+
+Why is it hard to just read JSON file?

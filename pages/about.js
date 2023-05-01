@@ -28,7 +28,7 @@ export default function about({mdData}) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps({req, res}) {
     const {data : markdownData} = await axios.get('https://raw.githubusercontent.com/kenryuS/kenryuS/main/README.md');
 
     return {

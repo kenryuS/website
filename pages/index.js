@@ -28,7 +28,7 @@ export default function Home({post}) {
                 This is the website of kenryuS.
             </p>
             <h2>Latest Diary Entry</h2>
-            <div>
+            <div className={styles.postHome}>
                 <small>Posted on {post.metadata.date}</small>
                 <h3>{post.metadata.title}</h3>
                 <p>{post.metadata.preview}</p>

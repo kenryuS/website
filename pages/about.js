@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import styles from "../styles/home.module.css"
+import aboutPageStyle from "../styles/aboutPage.module.css"
 import axios from 'axios';
 import React from 'react'
+import * as DOMPurify from 'isomorphic-dompurify'
+import {marked} from 'marked'
 
 export default function about({mdData}) {
+    let content = DOMPurify.sanitize(marked.parse(mdData));
     return (
         <div className={styles.container}>
             <Head>
@@ -22,7 +26,7 @@ export default function about({mdData}) {
                 </p>
 
                 <h3>About Myself:</h3>
-                <div dangerouslySetInnerHTML={{__html: mdData}}/>
+                <div className={aboutPageStyle.prestyle} dangerouslySetInnerHTML={{__html: content}}/>
             </main>
         </div>
     );
@@ -30,10 +34,11 @@ export default function about({mdData}) {
 
 export async function getServerSideProps({req, res}) {
     const {data : markdownData} = await axios.get('https://raw.githubusercontent.com/kenryuS/kenryuS/main/README.md');
+    //console.log(String.raw`${markdownData}`);
 
     return {
         props: {
-            mdData : markdownData.replace(/\n/g, "<br>")
+            mdData : markdownData.toString()
         }
     }
 }

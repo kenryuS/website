@@ -3,17 +3,17 @@
     background-color: #cccfcd;
     text-align: center;
     margin: 1vh 0.5vw;
-    display:inline-block;
+    display: block;
     width: 16vw;
-    min-width: 250px;
+    min-height: 250px;
 	aspect-ratio: 4/3;
-    min-height: 230px;
+    min-width: 230px;
 }
 
 @media screen and (max-width: 700px) {
-	.card {
-		margin: 5px auto;
-	}
+    .card {
+        margin: 5px auto;
+    }
 }
 
 .card p {

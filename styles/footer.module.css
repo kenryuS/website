@@ -9,10 +9,18 @@
     margin-bottom: 3vh;
 }
 
-.cont div {
+.spacerTop {
     margin: auto;
     width: 80%;
     border: 0.5vh black solid;
     background-color: black;
     margin-top: 5vh;
+}
+
+.spacerBottom {
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    background-color: white;
+    border: none;
 }

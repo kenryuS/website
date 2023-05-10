@@ -6,11 +6,14 @@ import matter from 'gray-matter'
 import Post from '../components/posts'
 import Link from 'next/link'
 
-const sortblog = (a, b) => {
-    return new Date(b.metadata.date) - new Date(a.metadata.date)
+const sortdiaryblog = (a, b) => {
+    return new Date(b.diarymetadata.date) - new Date(a.diarymetadata.date)
+}
+const sortaplifeblog = (a, b) => {
+    return new Date(b.aplifemetadata.date) - new Date(a.aplifemetadata.date)
 }
 
-export default function Home({post}) {
+export default function Home({diarypost, aplifepost}) {
   return (
     <div className={styles.container}>
         <Head>
@@ -29,10 +32,19 @@ export default function Home({post}) {
             </p>
             <h2>Latest Diary Entry</h2>
             <div className={styles.postHome}>
-                <small>Posted on {post.metadata.date}</small>
-                <h3>{post.metadata.title}</h3>
-                <p>{post.metadata.preview}</p>
-                <Link href={`/blog/diary/${post.slug}`}>
+                <small>Posted on {diarypost.diarymetadata.date}</small>
+                <h3>{diarypost.diarymetadata.title}</h3>
+                <p>{diarypost.diarymetadata.preview}</p>
+                <Link href={`/blog/diary/${diarypost.diaryslug}`}>
+                    <a>Read More </a>
+                </Link>
+            </div> 
+            <h2>Latest AP Life Entry</h2>
+            <div className={styles.postHome}>
+                <small>Posted on {aplifepost.aplifemetadata.date}</small>
+                <h3>{aplifepost.aplifemetadata.title}</h3>
+                <p>{aplifepost.aplifemetadata.preview}</p>
+                <Link href={`/blog/aplife/${aplifepost.aplifeslug}`}>
                     <a>Read More </a>
                 </Link>
             </div> 
@@ -42,19 +54,34 @@ export default function Home({post}) {
 }
 
 export async function getStaticProps() {
-    const files = fs.readdirSync(path.join('posts/diary'));
+    const diaryfiles = fs.readdirSync(path.join('posts/diary'));
 
-    const posts = files.map((filename) => {
-        const slug = filename.replace('.mdx', '');
-    const mdmeta = fs.readFileSync(path.join('posts/diary', filename), 'utf-8');
-    const {data:metadata} = matter(mdmeta);
+    const diaryposts = diaryfiles.map((filename) => {
+        const diaryslug = filename.replace('.mdx', '');
+    const diarymdmeta = fs.readFileSync(path.join('posts/diary', filename), 'utf-8');
+    const {data:diarymetadata} = matter(diarymdmeta);
     return {
-            slug,
-        metadata
+        diaryslug,
+        diarymetadata
+    };
+    });
+    
+    const aplifefiles = fs.readdirSync(path.join('posts/aplife'));
+
+    const aplifeposts = aplifefiles.map((filename) => {
+        const aplifeslug = filename.replace('.mdx', '');
+    const aplifemdmeta = fs.readFileSync(path.join('posts/aplife', filename), 'utf-8');
+    const {data:aplifemetadata} = matter(aplifemdmeta);
+    return {
+        aplifeslug,
+        aplifemetadata
     };
     });
 
     return {
-        props: {post: (posts.sort(sortblog))[0]}
+        props: {
+            diarypost: (diaryposts.sort(sortdiaryblog))[0],
+            aplifepost: (aplifeposts.sort(sortaplifeblog))[0]
+        }
     }
 }

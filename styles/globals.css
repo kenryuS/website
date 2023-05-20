@@ -13,6 +13,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+@media screen and (min-width: 1600px) {
+	html,
+	body {
+		padding: 0 10em;
+	}
+}
+
 a {
   color: inherit;
   text-decoration: underline;

@@ -6,7 +6,7 @@ function Linksinbuttons() {
         <nav className={styles.navi}>
             <Link href='/'><a><p>Home</p></a></Link>
             <Link href='/blog'><a><p>Blogs</p></a></Link>
-            <a href="https://kenryu-liveterm.vercel.app"><p>Terminal</p></a>
+            <Link href='/toOther'><a><p>Other</p></a></Link>
             <Link href='/about'><a><p>About</p></a></Link>
         </nav>
     );

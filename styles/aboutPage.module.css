@@ -3,9 +3,3 @@
     font-size: 12pt;
     word-wrap: break-word;
 }
-
-.prestyle img {
-    width: 25vw;
-    min-width: 450px;
-    height: auto;
-}

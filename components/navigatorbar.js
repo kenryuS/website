@@ -4,10 +4,10 @@ import styles from '../styles/navbar.module.css'
 function Linksinbuttons() {
     return (
         <nav className={styles.navi}>
-            <Link href='/'><a>Home</a></Link>
-            <Link href='/blog'><a>Blogs</a></Link>
-            <Link href='/toOther'><a>Other</a></Link>
-            <Link href='/about'><a>About</a></Link>
+            <Link href='/'>Home</Link>
+            <Link href='/blog'>Blogs</Link>
+            <Link href='/toOther'>Other</Link>
+            <Link href='/about'>About</Link>
         </nav>
     );
 }
@@ -16,10 +16,8 @@ function HomeButton() {
     return (
         <nav className={styles.bannerImage}>
         <Link href='/'>
-            <a>
                 <img src="/icon.jpeg" className={styles.banneraImage}/>
                 <h2>kenryuS</h2>
-            </a>
         </Link>
         </nav>
     );

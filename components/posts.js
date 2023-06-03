@@ -8,8 +8,8 @@ export default function Post({post, series}) {
             <h3>{post.metadata.title}</h3>
             <p>{post.metadata.preview}</p>
 
-            <Link href={`/blog/${series}/${post.slug}`}>
-                <a>Read More</a>
+            <Link href={`/blog/posts/${series}/${post.slug}`}>
+                Read More
             </Link>
         </div>
     )

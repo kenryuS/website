@@ -4,6 +4,25 @@ date: "02/19/2023"
 preview: "Why is it hard to just read the JSON file?"
 ---
 
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "AP CSP - Unit 8 Create Task Practice Progress",
+    date: "02/19/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
 My class started to prepare for the AP CSP create task by actually making it.
 
 From the selection, I chose the project uses different language. (Note: my class usually uses code.org javascript app lab)
@@ -42,3 +61,5 @@ After hours of research, I finally managed to read and print out the content by:
 </SyntaxHighlighter>
 
 Why is it hard to just read JSON file?
+
+<GoBackBtn series="aplife" /></div>

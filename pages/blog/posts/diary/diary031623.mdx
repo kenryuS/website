@@ -4,6 +4,25 @@ date: "03/16/2023"
 preview: "Career Exploration and Opertunity Fair"
 ---
 
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "March 16th, 2023",
+    date: "03/16/2023",
+}
+
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
 Today, I went to the Career Exploration and Opertunity Fair held in my high school.
 
 I found the volunteer opertunity for La Roche Univ for tech help for elderly.
@@ -13,3 +32,5 @@ For most booth, it presented the swimming instruction/life gaurd and other summe
 So, there were limited number of booths that actually had the STEM related opertunities. To be exact, 2; La Roche and YMCA.
 
 I really need to find some STEM related stuff.
+
+<GoBackBtn series="diary" /></div>

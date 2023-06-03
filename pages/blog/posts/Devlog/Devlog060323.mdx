@@ -1,0 +1,33 @@
+---
+title: "Website Update June 3, 2023"
+date: "06/03/2023"
+preview: "I updated posting method and Next.js"
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "Website Update June 3, 2023",
+    date: "06/03/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
+I updated the posting method of this website and the Next.js version to 13 from 12.
+
+The `posts/` directory in project root directory is now moved to the `pages/blog/posts/`. Now the full potential of MDX is unleashed.
+
+Also, the Next.js version is updated to the latest version 13 from version 12.
+
+I'll keep developping this website.
+
+<GoBackBtn series="Devlog" /></div>

@@ -1,0 +1,31 @@
+---
+title: "March 5, 2023 Sunday"
+date: "03/05/2023"
+preview: "Learning fractals"
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "March 5, 2023 Sunday",
+    date: "03/05/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
+In this weekend, I started to learn the fractal rendering.
+
+On my Raspberry Pi, I wrote the C++ program that plots the complex number on the plane at different iteration.
+
+![Plotted Points](/diary/030520230.png)
+
+<GoBackBtn series="diary" /></div>

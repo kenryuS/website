@@ -1,19 +1,9 @@
-import Head from 'next/head'
-import styles from '../styles/home.module.css'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import Post from '../components/posts'
-import Link from 'next/link'
+import Head from 'next/head';
+import styles from '../styles/home.module.css';
+import { getAllPostInfo,sortblog } from '../components/utils';
+import Post from '../components/posts';
 
-const sortdiaryblog = (a, b) => {
-    return new Date(b.diarymetadata.date) - new Date(a.diarymetadata.date)
-}
-const sortaplifeblog = (a, b) => {
-    return new Date(b.aplifemetadata.date) - new Date(a.aplifemetadata.date)
-}
-
-export default function Home({diarypost, aplifepost}) {
+export default function Home({latestPosts}) {
   return (
     <div className={styles.container}>
         <Head>
@@ -30,58 +20,41 @@ export default function Home({diarypost, aplifepost}) {
             <p className={styles.description}>
                 This is the website of kenryuS.
             </p>
-            <h2>Latest Diary Entry</h2>
-            <div className={styles.postHome}>
-                <small>Posted on {diarypost.diarymetadata.date}</small>
-                <h3>{diarypost.diarymetadata.title}</h3>
-                <p>{diarypost.diarymetadata.preview}</p>
-                <Link href={`/blog/diary/${diarypost.diaryslug}`}>
-                    <a>Read More </a>
-                </Link>
-            </div> 
-            <h2>Latest AP Life Entry</h2>
-            <div className={styles.postHome}>
-                <small>Posted on {aplifepost.aplifemetadata.date}</small>
-                <h3>{aplifepost.aplifemetadata.title}</h3>
-                <p>{aplifepost.aplifemetadata.preview}</p>
-                <Link href={`/blog/aplife/${aplifepost.aplifeslug}`}>
-                    <a>Read More </a>
-                </Link>
-            </div> 
+
+            <div className={styles.theLatestPosts}>
+            {latestPosts.map((post, index) => {
+                return (
+                    <div key={index}>
+                        <h3>Latest {post[2]} Post</h3>
+                        <Post post={post[0]} series={post[1]} />
+                    </div>
+                );
+            })}
+            </div>
         </main>
     </div>
   )
 }
 
 export async function getStaticProps() {
-    const diaryfiles = fs.readdirSync(path.join('posts/diary'));
+    const diaryposts = await getAllPostInfo('diary');
+    const aplifeposts = await getAllPostInfo('aplife');
+    const devlogposts = await getAllPostInfo('Devlog');
 
-    const diaryposts = diaryfiles.map((filename) => {
-        const diaryslug = filename.replace('.mdx', '');
-    const diarymdmeta = fs.readFileSync(path.join('posts/diary', filename), 'utf-8');
-    const {data:diarymetadata} = matter(diarymdmeta);
-    return {
-        diaryslug,
-        diarymetadata
-    };
-    });
-    
-    const aplifefiles = fs.readdirSync(path.join('posts/aplife'));
+    const diarypost = (diaryposts.sort(sortblog))[0];
+    const aplifepost = (aplifeposts.sort(sortblog))[0];
+    const devlogpost = (devlogposts.sort(sortblog))[0];
 
-    const aplifeposts = aplifefiles.map((filename) => {
-        const aplifeslug = filename.replace('.mdx', '');
-    const aplifemdmeta = fs.readFileSync(path.join('posts/aplife', filename), 'utf-8');
-    const {data:aplifemetadata} = matter(aplifemdmeta);
-    return {
-        aplifeslug,
-        aplifemetadata
-    };
-    });
+    // latest post, series directory name, series name
+    const latestPosts = [
+        [diarypost, "diary", "Diary"],
+        [aplifepost, "aplife", "AP Life"],
+        [devlogpost, "Devlog", "Devlog"],
+    ];
 
     return {
         props: {
-            diarypost: (diaryposts.sort(sortdiaryblog))[0],
-            aplifepost: (aplifeposts.sort(sortaplifeblog))[0]
+            latestPosts: latestPosts,
         }
     }
 }

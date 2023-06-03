@@ -1,14 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link';
-import styles from '../../../styles/home.module.css'
-import Post from '../../../components/posts';
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
-const sortblog = (a, b) => {
-    return new Date(b.metadata.date) - new Date(a.metadata.date)
-}
+import styles from '../../styles/home.module.css'
+import Post from '../../components/posts';
+import { getAllPostInfo, sortblog } from '../../components/utils';
 
 export default function blog({post}) {
     return (
@@ -42,17 +35,7 @@ export default function blog({post}) {
 
 export async function getStaticProps() {
 
-    const files = fs.readdirSync(path.join('posts/diary'));
-
-    const posts = files.map((filename) => {
-        const slug = filename.replace('.mdx', '');
-        const mdmeta = fs.readFileSync(path.join('posts/diary', filename), 'utf-8');
-        const {data:metadata} = matter(mdmeta);
-        return {
-            slug,
-            metadata
-        };
-    });
+    const posts = await getAllPostInfo('diary');
 
     return {
         props: {

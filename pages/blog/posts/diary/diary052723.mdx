@@ -1,0 +1,29 @@
+---
+title: "Local Pool Open Day"
+date: "05/27/2023"
+preview: "It was boring though."
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "Local Pool Open Day",
+    date: "05/27/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
+I went to the local pool open day party this afternoon.
+It was boring other than eating the hamburger and hotdog.
+I took the walk after that.
+
+<GoBackBtn series="diary" /></div>

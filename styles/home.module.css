@@ -12,10 +12,6 @@
     height: 100%;
 }
 
-.theLatestPosts {
-    display: flex;
-}
-
 .posts {
     position: static;
     display: flex;

@@ -21,7 +21,7 @@ export default function Home({latestPosts}) {
                 This is the website of kenryuS.
             </p>
 
-            <div className={styles.theLatestPosts}>
+            <div className={styles.posts}>
             {latestPosts.map((post, index) => {
                 return (
                     <div key={index}>

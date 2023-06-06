@@ -1,0 +1,29 @@
+---
+title: "Unity Game Dev Update - Ghost Shooter Beta"
+date: "06/05/2023"
+preview: "Added Wave System"
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "Unity Game Dev Update - Ghost Shooter Beta",
+    date: "06/05/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Devlog Blog post" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
+Today, I pushed the [commit](https://github.com/kenryuS/Ghost_Shooter_beta/commit/4056c61878b35db70b2234480a8526bb950ead9f) that added the basical implimentation of wave system to the game.
+
+For the future commits, I would like to add the translation to the next wave instead of new wave instantly begin after the another. Also, I want to add the menu to the pause screen such as go back to start scene.
+
+<GoBackBtn series="seriesname" /></div>

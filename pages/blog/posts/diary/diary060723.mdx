@@ -1,0 +1,30 @@
+---
+title: "Science Center"
+date: "06/07/2023"
+preview: "preview for the volunteer"
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "Science Center",
+    date: "06/07/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
+Today, I went to the nearest science center to preview the activities of what they are volunteering at there.
+The volunteer starts in late summer and since it is very popular, they are required to fill out the form including the essay just like "Why Us" college essay.
+I went several places to get the idea of what I will do if I were there.
+It was fun.
+
+<GoBackBtn series="diary" /></div>

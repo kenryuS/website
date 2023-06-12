@@ -1,0 +1,27 @@
+---
+title: "First Day at Math Enrichment"
+date: "06/12/2023"
+preview: "I'd rather read text book by myself."
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+
+export const meta = {
+    title: "First Day at Math Enrichment",
+    date: "06/12/2023",
+}
+
+<Head>
+    <title>kenryuS - {meta.title}</title>
+    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {meta.date}</small>
+
+Today, I went to the first day at a local community college for math enrichment. I'm going to skip pre-calc and take AP Calc AB next school year.
+
+<GoBackBtn series="diary" /></div>

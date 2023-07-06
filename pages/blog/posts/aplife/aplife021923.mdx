@@ -8,20 +8,24 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import GoBackBtn from '../../../../components/gobackbtn';
 import mdStyle from '../../../../styles/markdown.module.css';
 import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
 
 export const meta = {
     title: "AP CSP - Unit 8 Create Task Practice Progress",
-    date: "02/19/2023",
+    date: "2023-02-19T00:00:00.000-04:00",
+    moddate: "2023-02-19T00:00:00.000-04:00",
+    preview: "Why is it hard to just read the JSON file?",
+    seriesname: "aplife"
 }
 
 <Head>
-    <title>kenryuS - {meta.title}</title>
-    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <title>kenryuS Blog - {meta.seriesname}/{meta.title}</title>
     <link rel="icon" href="/icon.jpeg" />
 </Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL="/blog/posts/aplife/aplife021923" isArticle={true} articleInfo={{pubTime: meta.date, modTime: meta.moddate, tags: ["Programming", "C++", "Qt"]}} />
 <div className={mdStyle.Article}>
 <h1>{meta.title}</h1>
-<small>Last updated: {meta.date}</small>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
 
 My class started to prepare for the AP CSP create task by actually making it.
 

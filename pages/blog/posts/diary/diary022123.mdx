@@ -7,20 +7,31 @@ preview: "All it need was unplug and plug back in."
 import GoBackBtn from '../../../../components/gobackbtn';
 import mdStyle from '../../../../styles/markdown.module.css';
 import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
 
 export const meta = {
     title: "Arts and Bots Volunteer Experience",
-    date: "02/21/2023",
+    date: "2023-02-21T00:00:00.000-04:00",
+    moddate: "2023-02-21T00:00:00.000-04:00",
+    seriesname: "diary",
+    preview: "All it need was unplug and plug back in.",
+    url: "/blog/posts/diary/diary022123"
 }
 
 <Head>
     <title>kenryuS - {meta.title}</title>
-    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
     <link rel="icon" href="/icon.jpeg" />
 </Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL={meta.url} isArticle={true}
+    articleInfo={{
+        pubTime: meta.date,
+        modTime: meta.moddate,
+        tags: ["Diary"]
+    }}
+/>
 <div className={mdStyle.Article}>
 <h1>{meta.title}</h1>
-<small>Last updated: {meta.date}</small>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
 
 Today, I went to the volunteer for a nearby elementary school's Arts and Bots which is the combination of cardboard crafts and programming to make the simple yet creative robots.
 

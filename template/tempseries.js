@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../../styles/home.module.css'
 import Post from '../../components/posts';
 import { getAllPostInfo, sortblog } from '../../components/utils';
+import TheSEO from '../components/seo';
 
 const seriesname = "seriesname";
 
@@ -10,9 +11,10 @@ export default function blog({post}) {
         <div className={styles.container}>
             <Head>
                 <title>kenryuS AP Life Blog</title>
-                <meta name="description" content="kenryuS (Kenryu Shibata) Blog - Blog Home" />
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
+
+            <TheSEO title="kenryuS Blog <seriesname> Home" description="Blog list of <seriesname> in kenryuS website" currentURL="/blog/seriesname" />
 
             <main className={styles.mainContent}>
                 <h1 className={styles.title}>

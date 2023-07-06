@@ -2,15 +2,17 @@ import Head from 'next/head'
 import styles from '../../styles/home.module.css'
 import Post from '../../components/posts';
 import { getAllPostInfo, sortblog } from '../../components/utils';
+import TheSEO from '../../components/seo';
 
 export default function blog({post}) {
     return (
         <div className={styles.container}>
             <Head>
                 <title>kenryuS Blog</title>
-                <meta name="description" content="kenryuS (Kenryu Shibata) Blog - Diary Home" />
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
+
+            <TheSEO title="kenryuS Blog Diary Home" description="Blog list of Diary in kenryuS website" currentURL="/blog/diary" />
 
             <main className={styles.mainContent}>
                 <h1 className={styles.title}>

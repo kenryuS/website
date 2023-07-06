@@ -1,7 +1,7 @@
 ---
-title: "Document template"
-date: "M/D/Y"
-preview: "Preview Here"
+title: "AP Score Released!"
+date: "07/05/2023"
+preview: "Did I get 5?"
 ---
 
 import GoBackBtn from '../../../../components/gobackbtn';
@@ -10,12 +10,12 @@ import Head from 'next/head';
 import TheSEO from '../../../../components/seo';
 
 export const meta = {
-    title: "Document template",
-    date: "Y-M-DTHH:MM:SS.000-04:00",
-    moddate: "Y-M-DTHH:MM:SS.000-04:00",
-    seriesname: "",
-    preview: "",
-    url: "/blog/posts/<seriesname>/<blog_entry>"
+    title: "AP Score Released!",
+    date: "2023-07-05T21:54:00.000-04:00",
+    moddate: "2023-07-05T21:54:00.000-04:00",
+    seriesname: "aplife",
+    preview: "Did I get 5?",
+    url: "/blog/posts/aplife/aplife070523"
 }
 
 <Head>
@@ -26,13 +26,22 @@ export const meta = {
     articleInfo={{
         pubTime: meta.date,
         modTime: meta.moddate,
-        tags: ["str_arr"]
+        tags: ["AP"]
     }}
 />
 <div className={mdStyle.Article}>
 <h1>{meta.title}</h1>
 <small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
 
-*Hello World!*
+Today is the day! The AP score is released. I took AP Computer Science Principle and AP Japanese this year.
+
+The score is...
+
+* Comp Sci Princ: 5
+* Japanese: 5
+
+All 5!
+
+I was so happy to get the two 5s in first two AP courses.
 
 <GoBackBtn series={meta.seriesname} /></div>

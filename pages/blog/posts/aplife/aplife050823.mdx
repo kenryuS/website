@@ -7,20 +7,24 @@ preview: "Exam Day!"
 import GoBackBtn from '../../../../components/gobackbtn';
 import mdStyle from '../../../../styles/markdown.module.css';
 import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
 
 export const meta = {
     title: "AP CSP Exam",
-    date: "05/08/2023",
+    date: "2023-05-08T00:00:00.000-04:00",
+    moddate: "2023-05-08T00:00:00.000-04:00",
+    preview: "Exam Day!",
+    seriesname: "aplife"
 }
 
 <Head>
-    <title>kenryuS - {meta.title}</title>
-    <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
+    <title>kenryuS Blog - {meta.seriesname}/{meta.title}</title>
     <link rel="icon" href="/icon.jpeg" />
 </Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL="/blog/posts/aplife/aplife050823" isArticle={true} articleInfo={{pubTime: meta.date, modTime: meta.moddate, tags: ["CompSci", "AP"]}} />
 <div className={mdStyle.Article}>
 <h1>{meta.title}</h1>
-<small>Last updated: {meta.date}</small>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
 
 Today is the AP CSP exam day. We went to the local senior high school for the exam. It was the afternoon exam. See you in 2:30!
 

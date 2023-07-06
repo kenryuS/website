@@ -7,10 +7,14 @@ preview: "Exam day 2"
 import GoBackBtn from '../../../../components/gobackbtn';
 import mdStyle from '../../../../styles/markdown.module.css';
 import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
 
 export const meta = {
     title: "AP Japanese Exam",
-    date: "05/09/2023",
+    date: "2023-05-09T00:00:00.000-04:00",
+    moddate: "2023-05-09T00:00:00.000-04:00",
+    preview: "Exam day 2",
+    seriesname: "aplife"
 }
 
 <Head>
@@ -18,9 +22,10 @@ export const meta = {
     <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
     <link rel="icon" href="/icon.jpeg" />
 </Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL="/blog/posts/aplife/aplife050923" isArticle={true} articleInfo={{pubTime: meta.date, modTime: meta.moddate, tags: ["AP"]}} />
 <div className={mdStyle.Article}>
 <h1>{meta.title}</h1>
-<small>Last updated: {meta.date}</small>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
 
 Today, there was another AP exam I had to take.
 It was AP Japanese. There were 6 including me taking the exam. Many including me were from out of the district.

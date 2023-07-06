@@ -16,7 +16,7 @@ function HomeButton() {
     return (
         <nav className={styles.bannerImage}>
         <Link href='/'>
-                <img src="/icon.jpeg" className={styles.banneraImage}/>
+                <img src="/icon.jpeg" alt='Page Icon' className={styles.banneraImage}/>
                 <h2>kenryuS</h2>
         </Link>
         </nav>

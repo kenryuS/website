@@ -2,15 +2,17 @@ import Head from 'next/head'
 import Link from 'next/link';
 import { readdirSync } from 'fs';
 import styles from '../../styles/home.module.css'
+import TheSEO from '../../components/seo';
 
 export default function BlogHome({dirs}) {
     return (
         <div className={styles.container}>
             <Head>
                 <title>kenryuS Blog</title>
-                <meta name="description" content="kenryuS (Kenryu Shibata) Blog Home" />
                 <link rel="icon" href="/icon.jpeg" />
             </Head>
+
+            <TheSEO title="kenryuS website - Blog Series List" description="List of blog series in kenryuS Blog" currentURL="/blog" />
 
             <main className={styles.mainContent}>
                 <h1 className={styles.title}>

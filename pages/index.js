@@ -2,15 +2,17 @@ import Head from 'next/head';
 import styles from '../styles/home.module.css';
 import { getAllPostInfo,sortblog } from '../components/utils';
 import Post from '../components/posts';
+import TheSEO from '../components/seo';
 
 export default function Home({latestPosts}) {
   return (
     <div className={styles.container}>
         <Head>
             <title>kenryuS Website</title>
-            <meta name="description" content="kenryuS Website" />
             <link rel="icon" href="/icon.jpeg" />
         </Head>
+
+        <TheSEO title="kenryuS Website Home" description="Kenryu Shibata(kenryuS)'s website home page" currentURL="/" />
 
         <main className={styles.mainContent}>
             <h1 className={styles.title}>
@@ -21,11 +23,12 @@ export default function Home({latestPosts}) {
                 This is the website of kenryuS.
             </p>
 
+            <h2>Latest Blog Posts:</h2>
             <div className={styles.posts}>
             {latestPosts.map((post, index) => {
                 return (
                     <div key={index}>
-                        <h3>Latest {post[2]} Post</h3>
+                        <h3 className={styles.postSerriesHeading}>{post[2]}</h3>
                         <Post post={post[0]} series={post[1]} />
                     </div>
                 );

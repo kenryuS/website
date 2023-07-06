@@ -7,10 +7,15 @@ preview: "preview for the volunteer"
 import GoBackBtn from '../../../../components/gobackbtn';
 import mdStyle from '../../../../styles/markdown.module.css';
 import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
 
 export const meta = {
     title: "Science Center",
-    date: "06/07/2023",
+    date: "2023-06-07T00:00:00.000-04:00",
+    moddate: "2023-06-07T00:00:00.000-04:00",
+    seriesname: "diary",
+    preview: "preview for the volunteer",
+    url: "/blog/posts/diary/diary060723"
 }
 
 <Head>
@@ -18,9 +23,16 @@ export const meta = {
     <meta name="description" content="kenryuS (Kenryu Shibata) Blog" />
     <link rel="icon" href="/icon.jpeg" />
 </Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL={meta.url} isArticle={true}
+    articleInfo={{
+        pubTime: meta.date,
+        modTime: meta.moddate,
+        tags: ["Diary"]
+    }}
+/>
 <div className={mdStyle.Article}>
 <h1>{meta.title}</h1>
-<small>Last updated: {meta.date}</small>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
 
 Today, I went to the nearest science center to preview the activities of what they are volunteering at there.
 The volunteer starts in late summer and since it is very popular, they are required to fill out the form including the essay just like "Why Us" college essay.

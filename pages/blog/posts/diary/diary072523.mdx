@@ -1,0 +1,38 @@
+---
+title: "Final Day of Math Ench."
+date: "07/25/2023"
+preview: "The course finally ended."
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
+
+export const meta = {
+    title: "Final Day of Math Ench.",
+    date: "2023-07-25T21:49:00.000-04:00",
+    moddate: "2023-07-25T21:49:00.000-04:00",
+    seriesname: "diary",
+    preview: "The course finally ended.",
+    url: "/blog/posts/diary/diary072523"
+}
+
+<Head>
+    <title>kenryuS Blog - {meta.seriesname}/{meta.title}</title>
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL={meta.url} isArticle={true}
+    articleInfo={{
+        pubTime: meta.date,
+        modTime: meta.moddate,
+        tags: ["diary"]
+    }}
+/>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
+
+Today is the final day for the mathematics enchancment course.There was the final course exam and I aced it with 98%. I do have to take the district enrichment exam in order to officially registered into AP Calc AB course this Friday.
+
+<GoBackBtn series={meta.seriesname} /></div>

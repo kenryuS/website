@@ -1,0 +1,48 @@
+---
+title: "docker-guacamole Reincarnation"
+date: "07/28/2023"
+preview: "I updated oznu's docker-guacamole to latest version"
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
+
+export const meta = {
+    title: "docker-guacamole Reincarnation",
+    date: "2023-07-28T19:50:00.000-04:00",
+    moddate: "2023-07-28T19:50:00.000-04:00",
+    seriesname: "Devlog",
+    preview: "I updated oznu's docker-guacamole to latest version",
+    url: "/blog/posts/Devlog/Devlog072823"
+}
+
+<Head>
+    <title>kenryuS Blog - {meta.seriesname}/{meta.title}</title>
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL={meta.url} isArticle={true}
+    articleInfo={{
+        pubTime: meta.date,
+        modTime: meta.moddate,
+        tags: ["docker", "apache-guacamole", "Development"]
+    }}
+/>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
+
+I reincarnated [oznu's docker-guacamole](https://github.com/oznu/docker-guacamole) with latest software version as a fork.
+
+I did this because I noticed that the original repository has been archived since early 2021.
+
+The softwares was all outdated. It does run and access to the interface but I couldn't connect to servers, so I wanted to have the latest version.
+
+The process finished faster than I thought. I updated built both amd64 and armhf images within a day.
+
+The images are now available on [docker hub](https://hub.docker.com/r/kenryus/docker-guacamole)
+
+Github repository: [https://github.com/kenryuS/docker-guacamole](https://github.com/kenryuS/docker-guacamole)
+
+<GoBackBtn series={meta.seriesname} /></div>

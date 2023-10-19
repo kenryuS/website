@@ -1,0 +1,44 @@
+---
+title: "AP Calc BC Perfect Quiz"
+date: "10/18/2023"
+preview: "The Most Painful Quiz"
+---
+
+import GoBackBtn from '../../../../components/gobackbtn';
+import mdStyle from '../../../../styles/markdown.module.css';
+import Head from 'next/head';
+import TheSEO from '../../../../components/seo';
+
+export const meta = {
+    title: "AP Calc BC Perfect Quiz",
+    date: "2023-10-18T22:25:00.000-04:00",
+    moddate: "2023-10-18T22:25:00.000-04:00",
+    seriesname: "aplife",
+    preview: "The Most Painful Quiz",
+    url: "/blog/posts/aplife/aplife101823"
+}
+
+<Head>
+    <title>kenryuS Blog - {meta.seriesname}/{meta.title}</title>
+    <link rel="icon" href="/icon.jpeg" />
+</Head>
+<TheSEO title={meta.title} description={meta.preview} currentURL={meta.url} isArticle={true}
+    articleInfo={{
+        pubTime: meta.date,
+        modTime: meta.moddate,
+        tags: ["AP", "AP Calculus", "AP Calculus BC", "mathematics", "quiz"]
+    }}
+/>
+<div className={mdStyle.Article}>
+<h1>{meta.title}</h1>
+<small>Last updated: {new Date(meta.moddate).toLocaleDateString()}</small>
+
+Today I took "Perfect Quiz" for AP Calc BC after school. Perfect quiz is the quiz that have to be perfect 100% on score to get a credit and it only has 15 minutes to complete it.
+
+The topics are the graphs of basical functions, derivatives by definitions, special derivatives (trignometry, logarithm, etc.), and hard derivatives (quotient, product, logarithmic). 
+
+I had to do more than 5 attempts to have perfect score and most weren't because of time up or critical careless mistakes. By the last one, my finger barely wrote "y" and my hand aching.
+
+I'm glad to have Perfect Quiz done before the end of week.
+
+<GoBackBtn series={meta.seriesname} /></div>

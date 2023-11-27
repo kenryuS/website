@@ -10,6 +10,7 @@ export default function Home({latestPosts}) {
         <Head>
             <title>kenryuS Website</title>
             <link rel="icon" href="/icon.jpeg" />
+            <meta name="google-site-verification" content="GG4OXfsBuZlxxafEirTLFe9hX8f5nqPVlv0dBzT4pgU" />
         </Head>
 
         <TheSEO title="kenryuS Website Home" description="Kenryu Shibata(kenryuS)'s website home page" currentURL="/" />

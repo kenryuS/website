@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://website-kenryus.vercel.app/</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/toOther</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/about</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary090323</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/aplife/aplife101823</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/Devlog/Devlog072823</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/Devlog</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/aplife</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/diary</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/Devlog/Devlog060523</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/Devlog/Devlog060323</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/aplife/aplife070523</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/aplife/aplife050923</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/aplife/aplife050823</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/aplife/aplife021923</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary072523</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary061223</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary060723</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary052723</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary032823</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary031623</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary030523</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://website-kenryus.vercel.app/blog/posts/diary/diary022123</loc>
+  <lastmod>2023-12-01T03:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
